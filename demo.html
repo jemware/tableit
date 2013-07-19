@@ -16,6 +16,7 @@
 		body{
 			padding: 10px;
 			font-family: sans-serif;
+			font-size:18px;
 		}
 
 		.wrapper{
@@ -26,29 +27,97 @@
 
 		table{
 			margin:1em 0 1.5em;
+			border-collapse: collapse;
 		}
 
-		thead td{
+		th{
 			font-weight:bold;
-		}
-
-		table.noHead tr:first-child td, thead tr td{
-			border-bottom:1px solid #7f7f7f;
-		}
-
-		tr:nth-child(odd){
+			text-align:left;
 			background-color: #dbdbdb;
 		}
 
-		td{
-			padding:0.3em;
+		tr:nth-child(even){
+			background-color: #dbdbdb;
+		}
+
+		.noHead tr:nth-child(odd){
+			background-color: #dbdbdb;
+		}
+
+		.noHead tr:nth-child(even){
+			background-color:white;
+		}
+
+		tr{
+			padding:0.75em 0;
+		}
+
+		td,th{
+			padding: 0.5em 0.3em;
+			/*border-right:1px solid #dbdbdb;*/
 		}
 
 	</style>
 </head>
 <body>
 <div class="wrapper">
-	<table class="tableit noHead">
+	<h1>Table With &lt;thead&gt;</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Col 1</th>
+				<th>Col 2</th>
+				<th>Col 3</th>
+				<th>Col 4</th>
+				<th>Col 5</th>
+				<th>Col 6</th>
+				<th>Col 7</th>
+				<th>Col 8</th>
+				<th>Col 9</th>
+				<th>Col 10</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Data A1</td>
+				<td>Data A2</td>
+				<td>Data A3</td>
+				<td>Data A4</td>
+				<td>Data A5</td>
+				<td>Data A6</td>
+				<td>Data A7</td>
+				<td>Data A8</td>
+				<td>Data A9</td>
+				<td>Data A10</td>
+			</tr>
+			<tr>
+				<td>Data B1</td>
+				<td>Data B2</td>
+				<td>Data B3</td>
+				<td>Data B4</td>
+				<td>Data B5</td>
+				<td>Data B6</td>
+				<td>Data B7</td>
+				<td>Data B8</td>
+				<td>Data B9</td>
+				<td>Data B10</td>
+			</tr>
+			<tr>
+				<td>Data C1</td>
+				<td>Data C2</td>
+				<td>Data C3</td>
+				<td>Data C4</td>
+				<td>Data C5</td>
+				<td>Data C6</td>
+				<td>Data C7</td>
+				<td>Data C8</td>
+				<td>Data C9</td>
+				<td>Data C10</td>
+			</tr>
+		</tbody>
+	</table>
+	<h1>Table without &lt;thead&gt;</h1>
+	<table>
 		<tbody>
 			<tr>
 				<td><strong>Col 1</strong></td>
@@ -100,60 +169,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<table class="tableit">
-		<thead>
-			<tr>
-				<td>Col 1</td>
-				<td>Col 2</td>
-				<td>Col 3</td>
-				<td>Col 4</td>
-				<td>Col 5</td>
-				<td>Col 6</td>
-				<td>Col 7</td>
-				<td>Col 8</td>
-				<td>Col 9</td>
-				<td>Col 10</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Data A1</td>
-				<td>Data A2</td>
-				<td>Data A3</td>
-				<td>Data A4</td>
-				<td>Data A5</td>
-				<td>Data A6</td>
-				<td>Data A7</td>
-				<td>Data A8</td>
-				<td>Data A9</td>
-				<td>Data A10</td>
-			</tr>
-			<tr>
-				<td>Data B1</td>
-				<td>Data B2</td>
-				<td>Data B3</td>
-				<td>Data B4</td>
-				<td>Data B5</td>
-				<td>Data B6</td>
-				<td>Data B7</td>
-				<td>Data B8</td>
-				<td>Data B9</td>
-				<td>Data B10</td>
-			</tr>
-			<tr>
-				<td>Data C1</td>
-				<td>Data C2</td>
-				<td>Data C3</td>
-				<td>Data C4</td>
-				<td>Data C5</td>
-				<td>Data C6</td>
-				<td>Data C7</td>
-				<td>Data C8</td>
-				<td>Data C9</td>
-				<td>Data C10</td>
-			</tr>
-		</tbody>
-	</table>
+
 </div>
 
 </body>

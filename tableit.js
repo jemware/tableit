@@ -13,20 +13,28 @@
 
     return this.each(function() {
     	var t = $(this);
-    	if(settings.firstRowHeading == true){
+
+        t.addClass('tableit');
+
+        var theadExists = false;
+        if (t.find('thead').length>0){
+            theadExists = true;
+        }
+
+    	if(settings.firstRowHeading == true && theadExists == false){
+            t.addClass('noHead');
     		t.find('tr:not(:first)').each(function(){
     			$(this).children('td').each(function(index){
     				var heading = t.find('tr:first').children('td:eq('+index+')').text();
-    				// console.log('Heading:' + heading);
     				$(this).attr('data-title',heading);
     			});
     		});
     	}
     	else{
-    		t.find('tr').each(function(){
+    		t.find('tbody tr').each(function(){
     			$(this).children('td').each(function(index){
-    				var heading = t.find('tr:first').children('td:eq('+index+')').text();
-    				// console.log('Heading:' + heading);
+    				var heading = t.find('thead tr').children('th:eq('+index+')').text();
+                    // console.log('Heading:' + heading);
     				$(this).attr('data-title',heading);
     			});
     		});

@@ -2,7 +2,7 @@
 	
 	.tableit{
 		table&,thead,tbody,th,td,tr{ 
-			display: block; 
+			display: block;
 		}
 
 		/* Hide table headers (but not display: none;, for accessibility) */
@@ -13,7 +13,7 @@
 		}
 
 		/* If first row acts as the table header */
-		&.noHead,&.nohead{
+		&.noHead{
 			tr:first-child{
 				position: absolute;
 				top: -9999px;
@@ -21,7 +21,9 @@
 			}
 		}
 
-		td { 
+		
+
+		td{ 
 			/* Behave  like a "row" */
 			border: none;
 			position: relative;
@@ -38,6 +40,7 @@
 			left: 6px;
 			width: 45%; 
 			padding-right: 10px; 
+			padding-left:1em;
 			white-space: nowrap;
 			text-align:left;
 			font-weight: bold;
