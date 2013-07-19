@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="tableit.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('table').tableit({
+				firstRowHeading: true
+			});
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/tableit.css">
+	<style>
+		body{
+			padding: 10px;
+			font-family: sans-serif;
+		}
+
+		.wrapper{
+			max-width: 800px;
+			width: 100%;
+			margin:0 auto;
+		}
+
+		table{
+			margin:1em 0 1.5em;
+		}
+
+		thead td{
+			font-weight:bold;
+		}
+
+		table.noHead tr:first-child td, thead tr td{
+			border-bottom:1px solid #7f7f7f;
+		}
+
+		tr:nth-child(odd){
+			background-color: #dbdbdb;
+		}
+
+		td{
+			padding:0.3em;
+		}
+
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<table class="tableit noHead">
+		<tbody>
+			<tr>
+				<td><strong>Col 1</strong></td>
+				<td><strong>Col 2</strong></td>
+				<td><strong>Col 3</strong></td>
+				<td><strong>Col 4</strong></td>
+				<td><strong>Col 5</strong></td>
+				<td><strong>Col 6</strong></td>
+				<td><strong>Col 7</strong></td>
+				<td><strong>Col 8</strong></td>
+				<td><strong>Col 9</strong></td>
+				<td><strong>Col 10</strong></td>
+			</tr>
+			<tr>
+				<td>Data A1</td>
+				<td>Data A2</td>
+				<td>Data A3</td>
+				<td>Data A4</td>
+				<td>Data A5</td>
+				<td>Data A6</td>
+				<td>Data A7</td>
+				<td>Data A8</td>
+				<td>Data A9</td>
+				<td>Data A10</td>
+			</tr>
+			<tr>
+				<td>Data B1</td>
+				<td>Data B2</td>
+				<td>Data B3</td>
+				<td>Data B4</td>
+				<td>Data B5</td>
+				<td>Data B6</td>
+				<td>Data B7</td>
+				<td>Data B8</td>
+				<td>Data B9</td>
+				<td>Data B10</td>
+			</tr>
+			<tr>
+				<td>Data C1</td>
+				<td>Data C2</td>
+				<td>Data C3</td>
+				<td>Data C4</td>
+				<td>Data C5</td>
+				<td>Data C6</td>
+				<td>Data C7</td>
+				<td>Data C8</td>
+				<td>Data C9</td>
+				<td>Data C10</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="tableit">
+		<thead>
+			<tr>
+				<td>Col 1</td>
+				<td>Col 2</td>
+				<td>Col 3</td>
+				<td>Col 4</td>
+				<td>Col 5</td>
+				<td>Col 6</td>
+				<td>Col 7</td>
+				<td>Col 8</td>
+				<td>Col 9</td>
+				<td>Col 10</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Data A1</td>
+				<td>Data A2</td>
+				<td>Data A3</td>
+				<td>Data A4</td>
+				<td>Data A5</td>
+				<td>Data A6</td>
+				<td>Data A7</td>
+				<td>Data A8</td>
+				<td>Data A9</td>
+				<td>Data A10</td>
+			</tr>
+			<tr>
+				<td>Data B1</td>
+				<td>Data B2</td>
+				<td>Data B3</td>
+				<td>Data B4</td>
+				<td>Data B5</td>
+				<td>Data B6</td>
+				<td>Data B7</td>
+				<td>Data B8</td>
+				<td>Data B9</td>
+				<td>Data B10</td>
+			</tr>
+			<tr>
+				<td>Data C1</td>
+				<td>Data C2</td>
+				<td>Data C3</td>
+				<td>Data C4</td>
+				<td>Data C5</td>
+				<td>Data C6</td>
+				<td>Data C7</td>
+				<td>Data C8</td>
+				<td>Data C9</td>
+				<td>Data C10</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>
