@@ -29,6 +29,8 @@ Example:
 
 Click here for a [demo](https://dl.dropboxusercontent.com/u/179213368/sites/tableit/demo.html).
 
-##Browser Compaitiblity
+##Browser Compatibility
 
-IE8 support is coming.
+The plugin should work in all modern browsers, but I will be doing more extensive testing for older versions of Chrome, Firefox and Safari.
+
+As for IE: the plugin should work fine in IE9-10 but there is no support for anything below 9 currently.

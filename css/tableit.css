@@ -1,1 +1,64 @@
-@media only screen and (max-width:768px){table.tableit,.tableit thead,.tableit tbody,.tableit th,.tableit td,.tableit tr{display:block}.tableit thead tr{position:absolute;top:-9999px;left:-9999px}.tableit.noHead tr:first-child{position:absolute;top:-9999px;left:-9999px}.tableit td{border:0;position:relative;padding-left:50%;white-space:normal;text-align:left}.tableit td:before{position:absolute;top:6px;left:6px;width:45%;padding-right:10px;padding-left:1em;white-space:nowrap;text-align:left;font-weight:bold}.tableit td:before{content:attr(data-title)}}
+@media only screen and (max-width: 768px) {
+  .tableit {
+    /* Hide table headers (but not display: none;, for accessibility) */
+  
+    /* If first row acts as the table header */
+  
+    /* Label the data */
+  
+  }
+  table.tableit,
+  .tableit thead,
+  .tableit tbody,
+  .tableit th,
+  .tableit td,
+  .tableit tr {
+    display: block;
+  }
+  .tableit thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .tableit.noHead tr:first-child {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .tableit tr:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  .tableit td {
+    /* Behave  like a "row" */
+  
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+    float: left;
+  }
+  .tableit td:before {
+    /* Now like a table header */
+  
+    position: absolute;
+    /* Top/left values mimic padding */
+  
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    padding-left: 1em;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+  .tableit td:before {
+    content: attr(data-title);
+  }
+}

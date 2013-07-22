@@ -1,12 +1,13 @@
 @media only screen and (max-width: 768px) {
 	
 	.tableit{
-		table&,thead,tbody,th,td,tr{ 
+
+		table&,thead,tbody,th,td,tr{
 			display: block;
 		}
 
 		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr { 
+		thead tr {
 			position: absolute;
 			top: -9999px;
 			left: -9999px;
@@ -21,16 +22,29 @@
 			}
 		}
 
-		td{ 
+		tr{
+			// float:left;
+			&:after{
+				content: ".";
+				display: block;
+				clear: both;
+				visibility: hidden;
+				line-height: 0;
+				height: 0;
+			}
+		}
+
+		td{
 			/* Behave  like a "row" */
 			border: none;
 			position: relative;
 			padding-left: 50%; 
 			white-space: normal;
 			text-align:left;
+			float:left;
 		}
 
-		td:before { 
+		td:before {
 			/* Now like a table header */
 			position: absolute;
 			/* Top/left values mimic padding */
