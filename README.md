@@ -27,4 +27,8 @@ Example:
 
 ##Demo
 
-https://dl.dropboxusercontent.com/u/179213368/sites/tableit/demo.html
+Click here for a [demo](https://dl.dropboxusercontent.com/u/179213368/sites/tableit/demo.html).
+
+##Browser Compaitiblity
+
+IE8 support is coming.
