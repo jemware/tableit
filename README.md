@@ -24,3 +24,7 @@ Example:
 	$('table').tableit({
 		firstRowHeading: true
 	});
+
+##Demo
+
+https://dl.dropboxusercontent.com/u/179213368/sites/tableit/demo.html
