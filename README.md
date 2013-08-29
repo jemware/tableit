@@ -9,9 +9,7 @@ This plugin provides a more automated version of Chris Coyier’s [responsive ta
 2. Initialize tableit: `$('table').tableit();`
 3. Keep being successful and handsome.
 
-##Option(s)
-
-Right now there is only one option, but I may update this in the future.
+##Options
 
 ###firstRowHeading
 
@@ -23,6 +21,30 @@ Example:
 
 	$('table').tableit({
 		firstRowHeading: true
+	});
+
+###evenOdd
+
+Default: true
+
+Set whether or not to add odd classes to odd <tr>s.
+
+Example:
+
+	$('table').tableit({
+		evenOdd: true
+	});
+
+###headingMaxCharacters
+
+Default: null
+
+Sometimes your table headings are really long. I udnerstand, you’re trying to be descriptive! However, this means the heading will likely overflow into the your data. To mitigate this issue, you can set a heading character limit. If this limit is exceeded, a class 'double' is added to the offending <td> which you can use to increase the element’s height as necessary.
+
+Example:
+
+	$('table').tableit({
+		headingMaxCharacters: 20
 	});
 
 ##Demo
