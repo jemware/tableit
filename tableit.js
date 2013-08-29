@@ -7,39 +7,60 @@
 
   $.fn.tableit = function(options) {
 
-    var settings = $.extend( {
-      firstRowHeading: false
-    }, options);
+	var settings = $.extend( {
+	  firstRowHeading:      false,
+	  evenOdd:              true,
+	  headingMaxCharacters: null
+	}, options);
 
-    return this.each(function() {
-    	var t = $(this);
+	return this.each(function() {
+		var t = $(this);
 
-        t.addClass('tableit');
+		t.addClass('tableit');
 
-        var theadExists = false;
-        if (t.find('thead').length>0){
-            theadExists = true;
-        }
+		var theadExists = false;
+		if (t.find('thead').length>0){
+			theadExists = true;
+		}
 
-    	if(settings.firstRowHeading == true && theadExists == false){
-            t.addClass('noHead');
-    		t.find('tr:not(:first)').each(function(){
-    			$(this).children('td').each(function(index){
-    				var heading = t.find('tr:first').children('td:eq('+index+')').text();
-    				$(this).attr('data-title',heading);
-    			});
-    		});
-    	}
-    	else{
-    		t.find('tbody tr').each(function(){
-    			$(this).children('td').each(function(index){
-    				var heading = t.find('thead tr').children('th:eq('+index+')').text();
-                    // console.log('Heading:' + heading);
-    				$(this).attr('data-title',heading);
-    			});
-    		});
-    	}
-    });
+		if(settings.firstRowHeading == true && theadExists == false){
+			t.addClass('noHead');
+			t.find('tr:not(:first)').each(function(){
+				$(this).children('td').each(function(index){
+					var heading = t.find('tr:first').children('td:eq('+index+')').text();
+					$(this).attr('data-title',heading);
+					if(settings.headingMaxCharacters != null && settings.headingMaxCharacters != 0){
+						var copy = $(this).text().length;
+						//console.log(heading + ": " + copy);
+						if(heading.length > settings.headingMaxCharacters){
+							$(this).addClass('double');
+						}
+					}
+				});
+			});
+		}
+		else{
+			t.find('tbody tr').each(function(){
+				$(this).children('td').each(function(index){
+					if(t.find('thead tr').children('th').length > 0){
+						var heading = t.find('thead tr').children('th:eq('+index+')').text();
+					}else{
+						var heading = t.find('thead tr').children('td:eq('+index+')').text();
+					}
+					$(this).attr('data-title',heading);
+					if(settings.headingMaxCharacters != null && settings.headingMaxCharacters != 0){
+						if(heading.length > settings.headingMaxCharacters){
+							$(this).addClass('double');
+						}
+					}
+				});
+			});
+		}
+
+		if(settings.evenOdd){
+			t.find('tr:odd').addClass('odd');
+		}
+	});
 
   };
 
