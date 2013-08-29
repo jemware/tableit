@@ -1,6 +1,8 @@
 @media only screen and (max-width: 768px) {
 	
 	.tableit{
+		clear:both;
+		width:100%;
 
 		table&,thead,tbody,th,td,tr{
 			display: block;
@@ -38,7 +40,7 @@
 			/* Behave  like a "row" */
 			border: none;
 			position: relative;
-			padding-left: 50%; 
+			padding-left: 50% !important; 
 			white-space: normal;
 			text-align:left;
 			float:left;
@@ -47,13 +49,12 @@
 		td:before {
 			/* Now like a table header */
 			position: absolute;
-			/* Top/left values mimic padding */
-			top: 6px;
-			left: 6px;
+			top: 0px;
+			left: 0px;
 			width: 45%; 
 			padding-right: 10px; 
 			padding-left:1em;
-			white-space: nowrap;
+			//white-space: nowrap;
 			text-align:left;
 			font-weight: bold;
 		}
