@@ -33,7 +33,7 @@
 						var copy = $(this).text().length;
 						//console.log(heading + ": " + copy);
 						if(heading.length > settings.headingMaxCharacters){
-							$(this).addClass('double');
+							$(this).addClass('overflow');
 						}
 					}
 				});
@@ -50,7 +50,7 @@
 					$(this).attr('data-title',heading);
 					if(settings.headingMaxCharacters != null && settings.headingMaxCharacters != 0){
 						if(heading.length > settings.headingMaxCharacters){
-							$(this).addClass('double');
+							$(this).addClass('overflow');
 						}
 					}
 				});

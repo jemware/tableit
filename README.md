@@ -39,7 +39,7 @@ Example:
 
 Default: null
 
-Sometimes your table headings are really long. I udnerstand, you’re trying to be descriptive! However, this means the heading will likely overflow into the your data. To mitigate this issue, you can set a heading character limit. If this limit is exceeded, a class 'double' is added to the offending <td> which you can use to increase the element’s height as necessary.
+Sometimes your table headings are really long. I udnerstand, you’re trying to be descriptive! However, this means the heading will likely overflow into the your data. To mitigate this issue, you can set a heading character limit. If this limit is exceeded, a class 'overflow' is added to the offending <td> which you can use to increase the element’s height as necessary.
 
 Example:
 
