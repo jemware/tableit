@@ -1,0 +1,24 @@
+{
+  "name": "tableit",
+  "main": "tableit.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jemware/tableit",
+  "authors": [
+    "jemware <joshua.e.mcgrath@gmail.com>"
+  ],
+  "description": "This plugin provides a more automated version of Chris Coyier’s responsive table solution. It finds your table headers for you and inserts them into data-title attributes.",
+  "keywords": [
+    "responsive",
+    "tables",
+    "chris",
+    "coyier"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
